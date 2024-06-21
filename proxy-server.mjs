@@ -4,7 +4,6 @@ import { spawn, exec } from 'child_process';
 import path from 'path';
 import process from 'process';
 import { fileURLToPath } from 'url';
-import chokidar from 'chokidar';
 import fs from 'fs';
 
 const app = express();
