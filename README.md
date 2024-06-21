@@ -1,4 +1,4 @@
-# React + Vite + Razor + .NET 8
+# React + Vite + Blazor + .NET 8
 
 ## Screenshots
 
@@ -30,7 +30,7 @@ powershell -ExecutionPolicy ByPass -File .\install.ps1
 ## RUN
 To run the app
 - It will run React + Vite
-- Build RAZOR with .NET 8
+- Build BLAZOR with .NET 8
 ```
 npm run dev
 ```
