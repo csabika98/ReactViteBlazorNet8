@@ -2,8 +2,10 @@
 
 ## Screenshots
 
-
-
+![](screenshots/img.png)
+![](screenshots/img_1.png)
+![](screenshots/img_2.png)
+![](screenshots/img_3.png)
 ## Installation
 
 * <b>Install .NET 8</b>
