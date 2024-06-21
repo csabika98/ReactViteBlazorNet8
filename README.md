@@ -1,5 +1,8 @@
 # React + Vite + Razor + .NET 8
 
+## Screenshots
+
+
 
 ## Installation
 
@@ -11,7 +14,10 @@ https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-
 ```
 https://nodejs.org/dist/v20.15.0/node-v20.15.0-x64.msi
 ```
-
+* <b>Install NodeJS dependencies</b>
+```
+npm install
+```
 <b>OR</b>
 
 * use the installation script, install.ps1 (you will need to run as administrator)
@@ -22,7 +28,7 @@ powershell -ExecutionPolicy ByPass -File .\install.ps1
 ## RUN
 To run the app
 - It will run React + Vite
-- Build RAZOR with .NET 9
+- Build RAZOR with .NET 8
 ```
 npm run dev
 ```
