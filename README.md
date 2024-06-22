@@ -6,6 +6,13 @@
 ![](screenshots/img_1.png)
 ![](screenshots/img_2.png)
 ![](screenshots/img_3.png)
+
+## PROXY SERVER INCLUDED
+```
+http://localhost:8888 -> VITE + REACT
+http://localhost:8888/api -> .NET8 + Blazor Pages BACKEND
+```
+
 ## Installation
 
 * <b>Install .NET 8</b>
