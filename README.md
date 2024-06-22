@@ -21,8 +21,9 @@ http://localhost:8888/api -> .NET8 + Blazor Pages BACKEND
 powershell -ExecutionPolicy ByPass -File .\install.ps1
 ```
 
-```
+
 * <b>Install NodeJS dependencies</b>
+
 ```
 npm install
 ```
