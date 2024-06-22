@@ -14,25 +14,19 @@ http://localhost:8888/api -> .NET8 + Blazor Pages BACKEND
 ```
 
 ## Installation
-
-* <b>Install .NET 8</b>
-```
-https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.6-windows-hosting-bundle-installer
-```
-* <b>Install Node.JS</b>
-```
-https://nodejs.org/dist/v20.15.0/node-v20.15.0-x64.msi
-```
-* <b>Install NodeJS dependencies</b>
-```
-npm install
-```
-<b>OR</b>
+## Installation script works only on Windows 
 
 * use the installation script, install.ps1 (you will need to run as administrator)
 ```
 powershell -ExecutionPolicy ByPass -File .\install.ps1
 ```
+
+```
+* <b>Install NodeJS dependencies</b>
+```
+npm install
+```
+
 
 ## RUN
 To run the app
