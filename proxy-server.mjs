@@ -27,8 +27,8 @@ function findProjectRoot(currentDir, targetFolderName) {
     return null; // or handle this case as appropriate (e.g., throw an error or use a default path)
 }
 
-const projectRoot = findProjectRoot(__dirname, 'BlazorApp2');
-const blazorProjectPath = path.join(projectRoot, 'BlazorApp2');
+const projectRoot = findProjectRoot(__dirname, 'ReactViteBlazorNet8');
+const blazorProjectPath = path.join(projectRoot, 'ReactViteBlazorNet8');
 const blazorExecutablePath = path.join(blazorProjectPath, 'bin', 'Debug', 'net8.0');
 console.log(`Building Blazor project at path: ${blazorProjectPath}`);
 
