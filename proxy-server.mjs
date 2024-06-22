@@ -111,7 +111,7 @@ app.use('/BlazorApp2.styles.css', createProxyMiddleware({
 app.use('/', createProxyMiddleware({
     target: 'http://localhost:5173', // Assuming React runs on port 3000
     changeOrigin: true,
-    ws: true // Enable websocket proxy for hot module replacement
+    ws: false // Enable websocket proxy for hot module replacement
 }));
 
 const PORT = 8888;
