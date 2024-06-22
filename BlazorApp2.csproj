@@ -6,11 +6,4 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Content Remove="wwwroot\BlazorApp2.styles.css" />
-      <Resource Include="wwwroot\BlazorApp2.styles.css">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Resource>
-    </ItemGroup>
-
 </Project>

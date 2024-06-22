@@ -29,14 +29,12 @@ function findProjectRoot(currentDir, targetFolderName) {
 
 const projectRoot = findProjectRoot(__dirname, 'ReactViteBlazorNet8');
 const blazorProjectPath = path.join(projectRoot, 'ReactViteBlazorNet8');
-const blazorExecutablePath = path.join(blazorProjectPath, 'bin', 'Debug', 'net8.0');
 console.log(`Building Blazor project at path: ${blazorProjectPath}`);
 
 let blazorProcess;
 
 const runBlazorApp = () => {
-    const blazorExecutable = path.join(blazorExecutablePath, 'BlazorApp2.exe');
-    blazorProcess = spawn(blazorExecutable, { stdio: 'inherit' });
+    blazorProcess = spawn('dotnet', ['run', '--project', blazorProjectPath], { stdio: 'inherit' });
     blazorProcess.on('close', (code) => {
         console.log(`Blazor process exited with code ${code}`);
     });
@@ -64,13 +62,6 @@ const buildAndStartBlazor = () => {
 // Initial build and start
 buildAndStartBlazor();
 
-// Watch the Blazor project directory for changes
-//const watcher = chokidar.watch(blazorProjectPath, { ignored: /node_modules|\.git|\.vs|bin|obj/, ignoreInitial: true });
-//watcher.on('all', (event, path) => {
-//    console.log(`Detected ${event} in ${path}, rebuilding application...`);
-//    buildAndStartBlazor();
-//});
-
 // Middleware to log all requests
 app.use((req, res, next) => {
     console.log(`Request received: ${req.method} ${req.url}`);
@@ -79,42 +70,40 @@ app.use((req, res, next) => {
 
 // Proxy configuration to handle API and other requests
 app.use('/api/', createProxyMiddleware({
-    target: 'http://localhost:5000/', // Correct port
+    target: 'http://localhost:5019/', // Correct port
     changeOrigin: true,
     ws: true
 }));
 
-// Proxy configuration to handle API and other requests
 app.use('/favicon.png', createProxyMiddleware({
-    target: 'http://localhost:5000/', // Correct port
+    target: 'http://localhost:5019/', // Correct port
     changeOrigin: true,
     pathRewrite: {'^/': '/favicon.png'}
 }));
 
-
 app.use('/app.css', createProxyMiddleware({
-    target: 'http://localhost:5000', // Correct port
+    target: 'http://localhost:5019', // Correct port
     changeOrigin: true,
     pathRewrite: {'^/': '/app.css'}
 }));
 
 app.use('/bootstrap/', createProxyMiddleware({
-    target: 'http://localhost:5000/bootstrap/', // Correct port
+    target: 'http://localhost:5019/bootstrap/', // Correct port
     changeOrigin: true
 }));
 
 app.use('/_blazor/', createProxyMiddleware({
-    target: 'http://localhost:5000/_blazor/', // Correct port
+    target: 'http://localhost:5019/_blazor/', // Correct port
     changeOrigin: true
 }));
 
 app.use('/_framework', createProxyMiddleware({
-   target:"http://localhost:5000/_framework/",
-   changeOrigin: true 
+    target:"http://localhost:5019/_framework/",
+    changeOrigin: true 
 }));
 
 app.use('/BlazorApp2.styles.css', createProxyMiddleware({
-    target:"http://localhost:5000",
+    target:"http://localhost:5019",
     changeOrigin: true,
     pathRewrite: {'^/': '/BlazorApp2.styles.css'}
 }));
