@@ -1,5 +1,14 @@
 # React + Vite + Blazor + .NET 8
 
+## TO INSTALL IT ON LINUX
+```powershell
+sudo apt-get install make
+sudo make -f install.mk
+```
+## TO INSTALL IT ON WINDOWS
+```powershell
+powershell -ExecutionPolicy ByPass -File .\install.ps1
+```
 ## Screenshots
 
 ![](screenshots/img.png)
