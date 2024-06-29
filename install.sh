@@ -6,11 +6,17 @@
 sudo apt-get install -y curl software-properties-common apt-transport-https wget
 
 
-sudo rm -r "$HOME/.nvm"
-sudo rm -r "$HOME/nvm"
-sudo rm -r ~/nvm
-sudo rm -r ~/.nvm
-
+sudo rm -rf "$HOME/.nvm"
+sudo rm -rf "$HOME/nvm"
+sudo rm -rf ~/nvm
+sudo rm -rf ~/.nvm
+# For CodeSpace
+sudo rm -rf /home/codespace/nvm/current/bin/node
+sudo rm -rf /home/"$HOME"/nvm/current/bin/node
+sudo rm -rf /home/codespace/nvm
+sudo rm -rf /home/"$HOME"/nvm
+sudo rm -rf /home/codespace/.nvm
+sudo rm -rf /home/"$HOME"/.nvm
 
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
