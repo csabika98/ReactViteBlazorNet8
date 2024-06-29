@@ -10,24 +10,11 @@ install_homebrew:
 	fi
 	@echo "Homebrew is installed"
 
-install_nvm:
-	@echo "Installing NVM using Homebrew..."
-	@if ! brew list nvm >/dev/null 2>&1; then \
-		brew install nvm; \
-	fi
-	@echo "NVM is installed"
-
-add_to_profile:
-	@echo "Adding NVM to profile"
-	@echo 'export NVM_DIR="$$(brew --prefix nvm)"' >> ~/.zshrc
-	@echo '[ -s "$$NVM_DIR/nvm.sh" ] && \. "$$NVM_DIR/nvm.sh"' >> ~/.zshrc
-	@echo '[ -s "$$NVM_DIR/bash_completion" ] && \. "$$NVM_DIR/bash_completion"' >> ~/.zshrc
-
-install_node: install_nvm add_to_profile
+install_node: 
 	@echo "Installing Node.js LTS"
-	. "$$(brew --prefix nvm)/nvm.sh"; \
-	nvm install --lts; \
-	nvm use --lts
+	brew install node@20
+	brew link --overwrite node@20
+	brew unlink node@20 && brew link --force node@20
 
 install_dotnet:
 	@echo "Installing .NET 8.0"
