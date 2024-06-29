@@ -1,6 +1,6 @@
-.PHONY: all install_homebrew install_node
+.PHONY: all install_homebrew install_node install_dotnet
 
-all: install_homebrew install_node
+all: install_homebrew install_node install_dotnet
 
 install_homebrew:
 	@echo "Checking for Homebrew..."
@@ -13,7 +13,7 @@ install_homebrew:
 install_node:
 	@echo "Installing Node.js LTS 20"
 	brew install node@20
-	
+
 install_dotnet:
 	@echo "Installing .NET 8.0"
 	brew install dotnet@8
