@@ -6,19 +6,11 @@ set -e
 sudo apt-get install -y curl software-properties-common apt-transport-https wget
 
 
-if [ -d "$HOME/.nvm" ]; then
-    echo "Removing nvm..."
-    rm -rf "$HOME/.nvm"
-    rm -rf "$HOME/nvm"
-    sed -i '/NVM_DIR/d' $HOME/.bashrc
-fi
+rm -rf "$HOME/.nvm"
+rm -rf "$HOME/nvm"
+rm -rf ~/nvm
+rm -rf ~/.nvm
 
-if [ -d "$HOME/nvm" ]; then
-    echo "Removing nvm..."
-    rm -rf "$HOME/.nvm"
-    rm -rf "$HOME/nvm"
-    sed -i '/NVM_DIR/d' $HOME/.bashrc
-fi
 
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
