@@ -15,7 +15,9 @@ if [ -d "$HOME/.nvm" ]; then
 fi
 
 
-sudo apt-get install -y nodejs npm
+
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 
 sudo npm install -g n
