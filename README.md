@@ -8,7 +8,7 @@ make -f installMac.mk
 ## TO INSTALL IT ON LINUX
 ```powershell
 sudo apt-get install make
-sudo make -f install.mk
+make -f install.mk
 ```
 ## TO INSTALL IT ON WINDOWS
 ```powershell
