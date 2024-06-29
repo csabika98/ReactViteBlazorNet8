@@ -1,5 +1,10 @@
 # React + Vite + Blazor + .NET 8
 
+## TO INSTALL IT ON MAC
+```powershell
+make -f installMac.mk
+```
+
 ## TO INSTALL IT ON LINUX
 ```powershell
 sudo apt-get install make
