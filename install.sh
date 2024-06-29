@@ -5,7 +5,7 @@
 
 sudo apt-get install -y curl software-properties-common apt-transport-https wget
 
-
+## REMOVING NVM AS IT CAN CAUSE A CONFLICT
 sudo rm -rf "$HOME/.nvm"
 sudo rm -rf "$HOME/nvm"
 sudo rm -rf ~/nvm
