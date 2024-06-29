@@ -9,10 +9,16 @@ sudo apt-get install -y curl software-properties-common apt-transport-https wget
 if [ -d "$HOME/.nvm" ]; then
     echo "Removing nvm..."
     rm -rf "$HOME/.nvm"
+    rm -rf "$HOME/nvm"
     sed -i '/NVM_DIR/d' $HOME/.bashrc
 fi
 
-
+if [ -d "$HOME/nvm" ]; then
+    echo "Removing nvm..."
+    rm -rf "$HOME/.nvm"
+    rm -rf "$HOME/nvm"
+    sed -i '/NVM_DIR/d' $HOME/.bashrc
+fi
 
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -24,12 +30,13 @@ sudo npm install -g n
 sudo n lts
 
 
+
 # sudo n latest
 # sudo n 16.13.0
 
 
-sudo npm cache clean -f
-sudo n prune
+#sudo npm cache clean -f
+#sudo n prune
 
 
 node --version
@@ -47,4 +54,6 @@ sudo apt-get install -y dotnet-sdk-8.0
 rm packages-microsoft-prod.deb
 
 dotnet --version
+
+
 
