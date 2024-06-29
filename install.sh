@@ -1,15 +1,15 @@
 #!/bin/bash
 
-set -e
+#set -e
 
 
 sudo apt-get install -y curl software-properties-common apt-transport-https wget
 
 
-rm -rf "$HOME/.nvm"
-rm -rf "$HOME/nvm"
-rm -rf ~/nvm
-rm -rf ~/.nvm
+sudo rm -r "$HOME/.nvm"
+sudo rm -r "$HOME/nvm"
+sudo rm -r ~/nvm
+sudo rm -r ~/.nvm
 
 
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
