@@ -10,9 +10,11 @@ install_homebrew:
 	fi
 	@echo "Homebrew is installed"
 
-install_node:
-	@echo "Installing Node.js LTS 20"
+install_node: 
+	@echo "Installing Node.js LTS"
 	brew install node@20
+	brew link --overwrite node@20
+	brew unlink node@20 && brew link --force node@20
 
 install_dotnet:
 	@echo "Installing .NET 8.0"

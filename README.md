@@ -2,7 +2,9 @@
 
 ## TO INSTALL IT ON MAC
 ```powershell
+
 make -f installMac.mk
+
 ```
 
 ## TO INSTALL IT ON LINUX
