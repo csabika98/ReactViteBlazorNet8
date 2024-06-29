@@ -1,6 +1,6 @@
-.PHONY: all install_homebrew install_nvm install_node add_to_profile install_dotnet
+.PHONY: all install_homebrew install_node install_dotnet
 
-all: install_homebrew install_nvm add_to_profile install_node install_dotnet
+all: install_homebrew install_node install_dotnet
 
 install_homebrew:
 	@echo "Checking for Homebrew..."
